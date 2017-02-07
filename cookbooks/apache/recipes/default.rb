@@ -7,7 +7,7 @@
 
 if node['platform_family'] == "rhel"
 	package = "httpd" 
-elseif node['platform_family'] == "debian"
+elsif node['platform_family'] == "debian"
 	package = "apache2"
 end
 
@@ -19,6 +19,4 @@ end
 service 'apache2' do
 	service_name 'httpd'
 	action [:start, :enable]
-end 
-
-
+end
